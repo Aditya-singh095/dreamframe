@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import ScrollCanvas from "./ScrollCanvas";
 import LogoCarousel from "./LogoCarousel";
 import BentoGrid from "./BentoGrid";
+import ThreeDModelSection from "./ThreeDModelSection";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -380,6 +381,9 @@ export default function Home() {
 
       {/* SECTION 2: ASYMMETRIC BENTO GRID */}
       <BentoGrid />
+
+      {/* SECTION 3: 3D MODEL CREATOR */}
+      <ThreeDModelSection />
     </div>
   );
 }
