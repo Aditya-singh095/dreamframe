@@ -43,4 +43,6 @@ next-env.d.ts
 # archives & sensitive docs
 *.zip
 AI_TOKENS_LOCATION.md
+.agents/
+
 

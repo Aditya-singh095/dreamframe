@@ -35,9 +35,10 @@ export default function ThreeDModelSection() {
 
     const width = container.clientWidth;
     const height = container.clientHeight;
+    const isMobile = width < 640;
 
     const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 100);
-    camera.position.set(0, 0.6, 3.2);
+    camera.position.set(0, isMobile ? 0.35 : 0.6, isMobile ? 3.7 : 3.2);
 
     const renderer = new THREE.WebGLRenderer({
       canvas,
@@ -150,6 +151,8 @@ export default function ThreeDModelSection() {
       const w = container.clientWidth;
       const h = container.clientHeight;
       camera.aspect = w / h;
+      const mobile = w < 640;
+      camera.position.set(0, mobile ? 0.35 : 0.6, mobile ? 3.7 : 3.2);
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     };
@@ -241,17 +244,17 @@ export default function ThreeDModelSection() {
         <div className="absolute -left-20 top-1/3 w-[450px] h-[450px] bg-purple-50/30 rounded-full blur-3xl" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10 pt-10 pb-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 relative z-10 pt-8 sm:pt-10 pb-6">
         {/* ============================================================== */}
         {/* 1. TOP BAR (LOGO, SUB-NAV, ACTION PILL)                        */}
         {/* ============================================================== */}
-        <div className="flex items-center justify-between pb-8 border-b border-neutral-300/60">
+        <div className="flex items-center justify-between pb-6 sm:pb-8 border-b border-neutral-300/60">
           {/* Left Brand Identifier */}
-          <div className="flex items-center gap-3">
-            <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-neutral-900 text-white text-xs font-mono">
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-neutral-900 text-white text-xs font-mono shrink-0">
               3D
             </span>
-            <span className="font-mono text-xs tracking-[0.28em] uppercase font-bold text-neutral-900">
+            <span className="font-mono text-[11px] sm:text-xs tracking-[0.2em] sm:tracking-[0.28em] uppercase font-bold text-neutral-900 truncate">
               DREAMDOOR // MESH
             </span>
           </div>
@@ -273,10 +276,10 @@ export default function ThreeDModelSection() {
           </nav>
 
           {/* Right Action Button */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-3 shrink-0">
             <a
               href="#start"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-mono tracking-wider transition-all shadow-sm hover:shadow"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] sm:text-xs font-mono tracking-wider transition-all shadow-sm hover:shadow"
             >
               <span>LAUNCH 3D</span>
               <span>↗</span>
@@ -287,34 +290,34 @@ export default function ThreeDModelSection() {
         {/* ============================================================== */}
         {/* 2. MAIN 3D SHOWCASE STAGE                                      */}
         {/* ============================================================== */}
-        <div className="relative min-h-[640px] sm:min-h-[720px] flex items-center justify-center my-4 overflow-hidden">
+        <div className="relative min-h-[520px] sm:min-h-[660px] lg:min-h-[720px] flex flex-col lg:block my-4 overflow-hidden">
           {/* OVERSIZED DISPLAY TYPOGRAPHY (MATCHING hero3 "NUORBIT" PROPORTIONS) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span className="text-[12vw] sm:text-[13vw] font-mono font-black tracking-[0.22em] uppercase text-neutral-900/[0.045] whitespace-nowrap leading-none">
+            <span className="text-[16vw] sm:text-[14vw] lg:text-[13vw] font-mono font-black tracking-[0.22em] uppercase text-neutral-900/[0.045] whitespace-nowrap leading-none">
               DREAM3D
             </span>
           </div>
 
-          {/* LEFT CONTENT: HEADLINE, SUBTITLE, CTA (EXACT LAYOUT FROM hero3) */}
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 z-20 max-w-sm sm:max-w-md pointer-events-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-200/80 border border-neutral-300 text-[10px] font-mono tracking-[0.2em] text-neutral-700 uppercase mb-4">
+          {/* LEFT CONTENT: HEADLINE, SUBTITLE, CTA (RESPONSIVE STACK ON MOBILE, ABSOLUTE ON DESKTOP) */}
+          <div className="relative lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 z-20 w-full lg:max-w-md pointer-events-auto mb-6 lg:mb-0">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-200/80 border border-neutral-300 text-[10px] font-mono tracking-[0.2em] text-neutral-700 uppercase mb-3 sm:mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse" />
               <span>AI TEXT/IMAGE TO 3D MESH</span>
             </div>
 
-            <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-normal leading-[1.08] tracking-tight text-neutral-900">
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] lg:leading-[1.08] tracking-tight text-neutral-900">
               Sculpt Reality in Zero Latency.
             </h2>
 
-            <p className="mt-4 text-xs sm:text-sm font-mono tracking-wider text-neutral-500 uppercase leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-[11px] sm:text-sm font-mono tracking-wider text-neutral-500 uppercase leading-relaxed">
               DISCOVER PRODUCTION DIGITAL ASSETS AND HIGH-DENSITY TOPOLOGIES
             </p>
 
             {/* Left Action CTA */}
-            <div className="mt-8 flex items-center gap-4">
+            <div className="mt-6 sm:mt-8 flex items-center gap-4">
               <a
                 href="#start"
-                className="group inline-flex items-center gap-3 px-6 py-3 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-xs font-mono tracking-[0.18em] uppercase transition-all shadow-md hover:shadow-lg"
+                className="group inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] sm:text-xs font-mono tracking-[0.18em] uppercase transition-all shadow-md hover:shadow-lg"
               >
                 <span>GENERATE 3D MODEL</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -322,7 +325,7 @@ export default function ThreeDModelSection() {
             </div>
 
             {/* Mesh Specs Pill */}
-            <div className="mt-8 pt-6 border-t border-neutral-300/60 flex items-center gap-6 text-[11px] font-mono text-neutral-500">
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-neutral-300/60 flex items-center gap-6 text-[11px] font-mono text-neutral-500">
               <div>
                 <span className="block text-neutral-900 font-semibold text-xs">568,813</span>
                 <span>VERTICES</span>
@@ -338,9 +341,9 @@ export default function ThreeDModelSection() {
           {/* CENTER/RIGHT 3D WEBGL VIEWPORT */}
           <div
             ref={containerRef}
-            className="relative w-full h-[580px] sm:h-[660px] flex items-center justify-center z-10 cursor-grab active:cursor-grabbing"
+            className="relative w-full h-[440px] sm:h-[540px] lg:h-[660px] flex items-center justify-center z-10 cursor-grab active:cursor-grabbing rounded-2xl sm:rounded-none overflow-hidden"
           >
-            <canvas ref={canvasRef} className="w-full h-full block" />
+            <canvas ref={canvasRef} className="w-full h-full block touch-none" />
 
             {/* Loading Spinner */}
             {loading && (
@@ -353,14 +356,14 @@ export default function ThreeDModelSection() {
             )}
 
             {/* Interactive Control Pill Overlay (Top-Right) */}
-            <div className="absolute top-4 right-4 z-20 flex flex-wrap items-center gap-2 p-1.5 rounded-2xl bg-white/80 border border-neutral-300/80 backdrop-blur-md shadow-sm">
+            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-2xl bg-white/90 border border-neutral-300/80 backdrop-blur-md shadow-sm max-w-[calc(100%-24px)]">
               {/* Mode Buttons */}
-              <div className="flex items-center gap-1 bg-neutral-100 p-1 rounded-xl">
+              <div className="flex items-center gap-0.5 sm:gap-1 bg-neutral-100 p-0.5 sm:p-1 rounded-xl">
                 {(["textured", "clay", "wireframe"] as RenderMode[]).map((mode) => (
                   <button
                     key={mode}
                     onClick={() => setRenderMode(mode)}
-                    className={`px-3 py-1 rounded-lg text-[10px] font-mono uppercase tracking-wider transition-all ${
+                    className={`px-2 sm:px-3 py-1 text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider transition-all rounded-lg whitespace-nowrap ${
                       renderMode === mode
                         ? "bg-white text-neutral-900 font-semibold shadow-sm"
                         : "text-neutral-500 hover:text-neutral-900"
@@ -374,20 +377,20 @@ export default function ThreeDModelSection() {
               {/* Auto Rotate Toggle */}
               <button
                 onClick={() => setAutoRotate(!autoRotate)}
-                className={`px-3 py-1.5 rounded-xl text-[10px] font-mono uppercase tracking-wider border transition-all ${
+                className={`px-2 sm:px-3 py-1 rounded-xl text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider border transition-all whitespace-nowrap ${
                   autoRotate
                     ? "bg-indigo-50 border-indigo-200 text-indigo-700 font-semibold"
                     : "bg-white border-neutral-200 text-neutral-500"
                 }`}
                 title="Toggle Auto Spin"
               >
-                {autoRotate ? "↺ SPINNING" : "⏵ PAUSED"}
+                {autoRotate ? "↺ SPIN" : "⏵ PAUSE"}
               </button>
 
               {/* Reset View */}
               <button
                 onClick={handleResetView}
-                className="px-3 py-1.5 rounded-xl text-[10px] font-mono uppercase tracking-wider bg-white hover:bg-neutral-100 border border-neutral-200 text-neutral-700 transition-all"
+                className="px-2 sm:px-3 py-1 rounded-xl text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider bg-white hover:bg-neutral-100 border border-neutral-200 text-neutral-700 transition-all whitespace-nowrap"
                 title="Reset Camera"
               >
                 RESET
@@ -395,9 +398,9 @@ export default function ThreeDModelSection() {
             </div>
 
             {/* Floating Interaction Hint (Bottom Center) */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-20">
-              <span className="px-3 py-1 rounded-full bg-white/70 border border-neutral-300 text-[10px] font-mono text-neutral-600 uppercase tracking-widest backdrop-blur-md shadow-xs">
-                ✦ DRAG TO ROTATE 360° · SCROLL TO ZOOM
+            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-20 w-max max-w-[90vw] text-center">
+              <span className="inline-block px-3 py-1 rounded-full bg-white/80 border border-neutral-300 text-[9px] sm:text-[10px] font-mono text-neutral-600 uppercase tracking-wider sm:tracking-widest backdrop-blur-md shadow-xs truncate">
+                ✦ DRAG TO ROTATE 360° · PINCH TO ZOOM
               </span>
             </div>
           </div>
@@ -406,68 +409,64 @@ export default function ThreeDModelSection() {
         {/* ============================================================== */}
         {/* 3. BOTTOM TELEMETRY / METRIC BAR (EXACT HERO3 MATCH)           */}
         {/* ============================================================== */}
-        <div className="pt-6 border-t border-neutral-300/80 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 items-center">
+        <div className="pt-6 border-t border-neutral-300/80 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center">
           {/* STAT 1 (hero3 27K+ ARTISTS) */}
           <div className="flex flex-col">
-            <span className="text-2xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
+            <span className="text-xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
               48K+
             </span>
-            <span className="text-[10px] font-mono tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
               3D ASSETS CREATED
             </span>
           </div>
 
           {/* STAT 2 (hero3 876K+ ARTWORK) */}
-          <div className="flex flex-col border-l border-neutral-300/80 pl-6">
-            <span className="text-2xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
+          <div className="flex flex-col border-l border-neutral-300/80 pl-4 sm:pl-6">
+            <span className="text-xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
               1.2M+
             </span>
-            <span className="text-[10px] font-mono tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
               WATERTIGHT MESHES
             </span>
           </div>
 
           {/* STAT 3 (hero3 20K+ AUCTION) */}
-          <div className="flex flex-col border-l border-neutral-300/80 pl-6">
-            <span className="text-2xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
+          <div className="flex flex-col border-t sm:border-t-0 sm:border-l border-neutral-300/80 pt-4 sm:pt-0 sm:pl-6">
+            <span className="text-xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
               0.8s
             </span>
-            <span className="text-[10px] font-mono tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
               INFERENCE LATENCY
             </span>
           </div>
 
           {/* PLAY VIDEO BUTTON (MATCHING hero3 PLAY VIDEO CTA) */}
-          <div className="flex items-center gap-3 border-l border-neutral-300/80 pl-6">
+          <div className="flex items-center gap-3 border-t sm:border-t-0 border-l sm:border-l border-neutral-300/80 pt-4 sm:pt-0 pl-4 sm:pl-6">
             <button
               onClick={() => setShowVideoModal(true)}
-              className="group flex items-center gap-3 cursor-pointer"
+              className="group flex items-center gap-2.5 sm:gap-3 cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-full border border-neutral-900 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:bg-neutral-900 group-hover:text-white">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-neutral-900 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:bg-neutral-900 group-hover:text-white shrink-0">
                 <svg className="w-3.5 h-3.5 fill-current ml-0.5" viewBox="0 0 24 24">
                   <polygon points="6 3 20 12 6 21 6 3" />
                 </svg>
               </div>
-              <span className="text-[11px] font-mono tracking-[0.2em] uppercase font-bold text-neutral-900">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.16em] sm:tracking-[0.2em] uppercase font-bold text-neutral-900 whitespace-nowrap">
                 PLAY VIDEO
               </span>
             </button>
           </div>
 
           {/* FORMATS / SOCIALS COLUMN */}
-          <div className="flex items-center justify-end gap-2 border-l border-neutral-300/80 pl-6">
-            <span className="px-2 py-1 rounded bg-neutral-200/80 text-[10px] font-mono font-semibold text-neutral-700">
-              GLB
-            </span>
-            <span className="px-2 py-1 rounded bg-neutral-200/80 text-[10px] font-mono font-semibold text-neutral-700">
-              STL
-            </span>
-            <span className="px-2 py-1 rounded bg-neutral-200/80 text-[10px] font-mono font-semibold text-neutral-700">
-              OBJ
-            </span>
-            <span className="px-2 py-1 rounded bg-neutral-200/80 text-[10px] font-mono font-semibold text-neutral-700">
-              USDZ
-            </span>
+          <div className="col-span-2 sm:col-span-1 lg:col-span-1 flex items-center justify-start sm:justify-end gap-1.5 sm:gap-2 pt-3 sm:pt-0 border-t sm:border-t-0 lg:border-l border-neutral-300/80 lg:pl-6">
+            {["GLB", "STL", "OBJ", "USDZ"].map((format) => (
+              <span
+                key={format}
+                className="px-2 py-1 rounded bg-neutral-200/80 text-[10px] font-mono font-semibold text-neutral-700"
+              >
+                {format}
+              </span>
+            ))}
           </div>
         </div>
       </div>

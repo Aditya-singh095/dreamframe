@@ -58,7 +58,7 @@ export default function Home() {
         className="relative h-[450vh] w-full bg-black"
       >
         {/* FULL-SCREEN STICKY VIEWPORT PINNED WHILE SCROLLING */}
-        <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-between">
+        <div className="sticky top-0 h-screen sm:h-screen min-h-[100dvh] h-[100dvh] w-full overflow-hidden flex flex-col justify-between">
         {/* CINEMATIC SCROLL-LINKED HTML5 CANVAS ANIMATION */}
         <ScrollCanvas scrollProgress={scrollProgress} />
 
@@ -69,14 +69,14 @@ export default function Home() {
         </div>
 
         {/* MAIN VISUAL: "DREAMDOOR" AT BOTTOM WITH WHITE/LAVENDER GRADIENT, PINK GLOW & DEPTH SHADOW */}
-        <div className="absolute bottom-11 sm:bottom-13 lg:bottom-15 left-[45%] -translate-x-1/2 w-[90vw] text-center select-none pointer-events-none z-[1]">
-          <span className="block text-[10.4vw] sm:text-[11vw] lg:text-[11.4vw] font-bold tracking-[0.11em] sm:tracking-[0.13em] uppercase font-mono leading-none whitespace-nowrap bg-gradient-to-b from-white via-[#f8f6ff] to-[#d8b4fe]/90 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(244,114,182,0.38)] drop-shadow-[0_0_22px_rgba(236,72,153,0.25)] drop-shadow-[0_16px_36px_rgba(0,0,0,0.95)]">
+        <div className="absolute bottom-20 sm:bottom-13 lg:bottom-15 left-1/2 lg:left-[45%] -translate-x-1/2 w-[90vw] text-center select-none pointer-events-none z-[1]">
+          <span className="block text-[10vw] sm:text-[11vw] lg:text-[11.4vw] font-bold tracking-[0.08em] sm:tracking-[0.13em] uppercase font-mono leading-none whitespace-nowrap bg-gradient-to-b from-white via-[#f8f6ff] to-[#d8b4fe]/90 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(244,114,182,0.38)] drop-shadow-[0_0_22px_rgba(236,72,153,0.25)] drop-shadow-[0_16px_36px_rgba(0,0,0,0.95)]">
             DREAMDOOR
           </span>
         </div>
 
         {/* TOP NAVIGATION BAR */}
-        <header className="relative z-50 w-full px-6 sm:px-10 lg:px-16 pt-7 pb-4">
+        <header className="relative z-50 w-full px-4 sm:px-10 lg:px-16 pt-5 sm:pt-7 pb-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
             {/* Brand Logo */}
             <a
@@ -178,13 +178,13 @@ export default function Home() {
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle Navigation"
-                className="md:hidden w-8 h-8 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-white/70"
+                className="md:hidden w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 border border-white/20 flex items-center justify-center text-white backdrop-blur-md shadow-sm transition-all"
               >
                 <svg
-                  className="w-3.5 h-3.5"
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.5"
+                  strokeWidth="1.75"
                   viewBox="0 0 24 24"
                 >
                   {mobileMenuOpen ? (
@@ -197,57 +197,59 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Mobile Dropdown Menu */}
+          {/* Mobile Dropdown Menu (Bold, High Contrast, Frosted Pill Styling) */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-4 mx-auto max-w-md p-5 rounded-2xl bg-black/95 border border-white/10 backdrop-blur-2xl shadow-2xl flex flex-col gap-4">
+            <div className="md:hidden mt-3 mx-auto w-full p-4 rounded-2xl bg-black/90 border border-white/20 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.85)] flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
               <a
                 href="#"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white text-xs font-light tracking-[0.2em] uppercase py-1 border-b border-white/5"
+                className="flex items-center justify-between text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl bg-white/10 border border-white/15 shadow-sm"
               >
-                Home
+                <span>Home</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-violet-400 shadow-[0_0_8px_#a855f7]" />
               </a>
               <a
                 href="#about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/60 hover:text-white text-xs font-light tracking-[0.2em] uppercase py-1 border-b border-white/5"
+                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
               >
-                About
+                <span>About</span>
               </a>
               <a
                 href="#products"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/60 hover:text-white text-xs font-light tracking-[0.2em] uppercase py-1 border-b border-white/5"
+                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
               >
-                Products
+                <span>Products</span>
               </a>
               <a
                 href="#blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/60 hover:text-white text-xs font-light tracking-[0.2em] uppercase py-1 border-b border-white/5"
+                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
               >
-                Blog
+                <span>Blog</span>
               </a>
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-white/60 hover:text-white text-xs font-light tracking-[0.2em] uppercase py-1"
+                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
               >
-                Contact
+                <span>Contact</span>
               </a>
               <a
                 href="#start"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 text-center py-2.5 rounded-full bg-gradient-to-r from-amber-500/80 via-rose-500/80 to-purple-600/80 text-[11px] font-light uppercase tracking-wider text-white"
+                className="mt-2 flex items-center justify-center gap-2 py-3 rounded-full bg-white/20 hover:bg-white/30 border border-white/30 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-md transition-all"
               >
-                Get Started →
+                <span>Get Started</span>
+                <span>→</span>
               </a>
             </div>
           )}
         </header>
 
         {/* MAIN HERO CONTENT STAGE */}
-        <main className="relative z-10 w-full px-6 sm:px-10 lg:px-16 my-auto py-8 lg:py-14">
+        <main className="relative z-10 w-full px-4 sm:px-10 lg:px-16 my-auto py-6 sm:py-8 lg:py-14">
           <div className="max-w-7xl mx-auto flex flex-col items-start justify-center min-h-[220px]">
             {/* Watch Demo Reel Button */}
             <div className="flex items-center">
@@ -297,7 +299,7 @@ export default function Home() {
         </div>
 
         {/* BOTTOM FOOTER / EDITORIAL QUOTE BAR */}
-        <footer className="relative z-20 w-full px-6 sm:px-10 lg:px-16 py-6 pb-8">
+        <footer className="relative z-20 w-full px-4 sm:px-10 lg:px-16 py-4 sm:py-6 pb-6 sm:pb-8">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
             {/* Left subtle prompt pill */}
             <div className="hidden sm:flex items-center gap-2 text-white/35 font-mono text-[11px]">
@@ -306,9 +308,9 @@ export default function Home() {
             </div>
 
             {/* Right Editorial Quote with Sparkle & Line (Matching Reference) */}
-            <div className="flex items-center gap-3 sm:gap-4 ml-auto text-right">
+            <div className="flex items-center justify-center sm:justify-end gap-3 sm:gap-4 w-full sm:w-auto sm:ml-auto text-center sm:text-right">
               <span className="text-violet-300/70">✦</span>
-              <span className="w-12 sm:w-16 h-[1px] bg-white/15" />
+              <span className="w-8 sm:w-16 h-[1px] bg-white/15" />
               <p className="text-[11px] sm:text-xs font-light text-white/60">
                 More than a destination — <span className="text-white/90 italic">it&apos;s a feeling.</span>
               </p>

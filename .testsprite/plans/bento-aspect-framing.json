@@ -1,0 +1,26 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.14.0/schemas/plan.schema.json",
+  "projectId": "5e84738d-6c6b-4daf-9e4c-a713a212885e",
+  "type": "frontend",
+  "name": "Bento Grid aspect ratio controls",
+  "description": "Verifies scrolling to the Bento Grid and switching between canvas aspect ratios",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Scroll down to the Infinite Aspect Framing bento card"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify aspect ratio options 16:9 Cinema, 9:16 Portrait, 1:1 Square, and 21:9 Ultrawide are displayed"
+    },
+    {
+      "type": "action",
+      "description": "Click on the 9:16 Portrait aspect ratio button"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the 9:16 Portrait option becomes active"
+    }
+  ]
+}

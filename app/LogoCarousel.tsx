@@ -362,10 +362,10 @@ export default function LogoCarousel() {
       </div>
 
       {/* Marquee Track Container with Edge Fade Masking */}
-      <div className="relative w-full overflow-hidden flex flex-col gap-6 sm:gap-8">
+      <div className="relative w-full overflow-hidden flex flex-col gap-5 sm:gap-8">
         {/* Left and Right Edge Vignette Fades */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-48 bg-gradient-to-r from-black via-black/80 to-transparent z-10" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-48 bg-gradient-to-l from-black via-black/80 to-transparent z-10" />
 
         {/* Row 1: Right -> Left */}
         <div className="flex w-full overflow-hidden">
@@ -373,12 +373,12 @@ export default function LogoCarousel() {
             {[...rowOneLogos, ...rowOneLogos].map((logo, index) => (
               <div
                 key={`r1-${index}`}
-                className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
+                className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>
+                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.24em] text-white/40 group-hover:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>
@@ -392,12 +392,12 @@ export default function LogoCarousel() {
             {[...rowTwoLogos, ...rowTwoLogos].map((logo, index) => (
               <div
                 key={`r2-${index}`}
-                className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
+                className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>
+                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.24em] text-white/40 group-hover:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>
@@ -411,12 +411,12 @@ export default function LogoCarousel() {
             {[...rowThreeLogos, ...rowThreeLogos].map((logo, index) => (
               <div
                 key={`r3-${index}`}
-                className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
+                className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>
+                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.24em] text-white/40 group-hover:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>
@@ -430,12 +430,12 @@ export default function LogoCarousel() {
             {[...rowFourLogos, ...rowFourLogos].map((logo, index) => (
               <div
                 key={`r4-${index}`}
-                className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
+                className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>
+                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.24em] text-white/40 group-hover:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>

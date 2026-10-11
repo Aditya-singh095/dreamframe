@@ -1,0 +1,34 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TestSprite/testsprite-cli/v0.14.0/schemas/plan.schema.json",
+  "projectId": "5e84738d-6c6b-4daf-9e4c-a713a212885e",
+  "type": "frontend",
+  "name": "3D Model Creator shading and controls",
+  "description": "Verifies 3D model studio section with material mode toggles (Textured, Clay, Wireframe) and auto-rotate controls",
+  "priority": "p1",
+  "planSteps": [
+    {
+      "type": "action",
+      "description": "Scroll to the 3D Model Creator section at the bottom of the page"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify the section header DREAMDOOR // MESH, headline Sculpt Reality in Zero Latency, and Generate 3D Model button are present"
+    },
+    {
+      "type": "action",
+      "description": "Click the CLAY material mode button"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify CLAY mode is activated"
+    },
+    {
+      "type": "action",
+      "description": "Click the WIREFRAME material mode button"
+    },
+    {
+      "type": "assertion",
+      "description": "Verify WIREFRAME mode is activated"
+    }
+  ]
+}

@@ -23,7 +23,7 @@ export default function BentoGrid() {
         <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 relative z-10">
 
         {/* ASYMMETRIC BENTO GRID */}
         {/* ASYMMETRIC BENTO GRID CONTAINER WITH ROW-ALIGNED ROWS */}
@@ -33,7 +33,7 @@ export default function BentoGrid() {
           {/* ============================================================== */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
             {/* CARD 1: LARGE HERO SHOWCASE (7 COLS) */}
-            <div className="lg:col-span-7 h-full min-h-[460px] group relative rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="lg:col-span-7 h-full min-h-[420px] sm:min-h-[460px] group relative rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl overflow-hidden p-5 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               {/* Background Artwork with Subtle Zoom on Hover */}
               <div className="absolute inset-0 pointer-events-none z-0">
                 <Image
@@ -83,7 +83,7 @@ export default function BentoGrid() {
             </div>
 
             {/* CARD 2: MULTI-MODAL RATIO & GUIDANCE (5 COLS) */}
-            <div className="lg:col-span-5 h-full min-h-[460px] rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-pink-500/30 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="lg:col-span-5 h-full min-h-[420px] sm:min-h-[460px] rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-pink-500/30 backdrop-blur-xl p-5 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               <div>
                 {/* Header Badge */}
                 <div className="flex items-center justify-between mb-4">
@@ -130,15 +130,17 @@ export default function BentoGrid() {
                   <span className="text-white/50 text-[11px]">CFG GUIDANCE SCALE</span>
                   <span className="text-violet-300 font-medium">{guidanceScale.toFixed(1)}</span>
                 </div>
-                <input
-                  type="range"
-                  min="1"
-                  max="15"
-                  step="0.5"
-                  value={guidanceScale}
-                  onChange={(e) => setGuidanceScale(parseFloat(e.target.value))}
-                  className="w-full accent-violet-400 h-1 bg-white/10 rounded-lg appearance-none cursor-pointer"
-                />
+                <div className="py-2">
+                  <input
+                    type="range"
+                    min="1"
+                    max="15"
+                    step="0.5"
+                    value={guidanceScale}
+                    onChange={(e) => setGuidanceScale(parseFloat(e.target.value))}
+                    className="w-full accent-violet-400 h-2 bg-white/10 rounded-lg appearance-none cursor-pointer"
+                  />
+                </div>
                 <div className="flex justify-between text-[10px] font-mono text-white/30 mt-1">
                   <span>Subtle (1.0)</span>
                   <span>Balanced (7.5)</span>
@@ -153,7 +155,7 @@ export default function BentoGrid() {
           {/* ============================================================== */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-5 sm:gap-6 items-stretch">
             {/* CARD 3: TALL EDITORIAL TYPOGRAPHY (4 COLS) */}
-            <div className="md:col-span-1 lg:col-span-4 h-full min-h-[400px] rounded-3xl bg-gradient-to-br from-violet-950/20 via-black to-black border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="md:col-span-1 lg:col-span-4 h-full min-h-[360px] sm:min-h-[400px] rounded-3xl bg-gradient-to-br from-violet-950/20 via-black to-black border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-5 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono tracking-[0.25em] text-violet-300 uppercase">
                   LATENT PHILOSOPHY
@@ -185,7 +187,7 @@ export default function BentoGrid() {
             </div>
 
             {/* CARD 4: CELESTIAL BLOOM & SEED CONSISTENCY (5 COLS) */}
-            <div className="md:col-span-1 lg:col-span-5 h-full min-h-[400px] group relative rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-purple-500/30 backdrop-blur-xl overflow-hidden p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="md:col-span-1 lg:col-span-5 h-full min-h-[360px] sm:min-h-[400px] group relative rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-purple-500/30 backdrop-blur-xl overflow-hidden p-5 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               <div className="absolute inset-0 pointer-events-none z-0">
                 <Image
                   src="/bento-bloom.jpg"
@@ -218,7 +220,7 @@ export default function BentoGrid() {
             </div>
 
             {/* CARD 5: REAL-TIME RADAR TELEMETRY (3 COLS) */}
-            <div className="md:col-span-2 lg:col-span-3 h-full min-h-[400px] rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="md:col-span-2 lg:col-span-3 h-full min-h-[340px] sm:min-h-[400px] rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-5 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono text-white/40 uppercase tracking-widest">
                   DISPATCH CLUSTER
@@ -250,7 +252,7 @@ export default function BentoGrid() {
           {/* ============================================================== */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-stretch">
             {/* CARD 6: AVATAR / CHARACTER IDENTITY (4 COLS) */}
-            <div className="md:col-span-12 lg:col-span-4 h-full min-h-[380px] rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="md:col-span-12 lg:col-span-4 h-full min-h-[340px] sm:min-h-[380px] rounded-3xl bg-white/[0.02] hover:bg-white/[0.035] border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-5 sm:p-8 flex flex-col justify-between transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               {/* Top Header */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -303,7 +305,7 @@ export default function BentoGrid() {
             </div>
 
             {/* CARD 7: GRAND LATENT SPACE GRID TERMINAL (8 COLS) */}
-            <div className="md:col-span-12 lg:col-span-8 h-full min-h-[380px] rounded-3xl bg-black border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
+            <div className="md:col-span-12 lg:col-span-8 h-full min-h-[340px] sm:min-h-[380px] rounded-3xl bg-black border border-white/[0.08] hover:border-violet-500/30 backdrop-blur-xl p-5 sm:p-8 flex flex-col justify-between relative overflow-hidden transition-all duration-500 shadow-[0_8px_32px_rgba(0,0,0,0.5)]">
               {/* Tech Matrix Grid Background */}
               <div
                 className="absolute inset-0 pointer-events-none opacity-20"
@@ -316,7 +318,7 @@ export default function BentoGrid() {
               <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black pointer-events-none" />
 
               {/* Top Coordinates Header */}
-              <div className="relative z-10 flex items-center justify-between pb-4 border-b border-white/[0.06]">
+              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center justify-between gap-1.5 sm:gap-0 pb-4 border-b border-white/[0.06]">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
                   <span className="text-[11px] font-mono tracking-widest text-white/70 uppercase">
