@@ -78,13 +78,13 @@ export default function Home() {
         {/* TOP NAVIGATION BAR */}
         <header className="relative z-50 w-full px-4 sm:px-10 lg:px-16 pt-5 sm:pt-7 pb-4">
           <div className="max-w-7xl mx-auto flex items-center justify-between">
-            {/* Brand Logo */}
+            {/* Brand Logo with Liquid Glass Pill Accent */}
             <a
               href="#"
-              className="flex items-center gap-3 group text-white tracking-[0.32em] text-xs uppercase font-bold"
+              className="flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-white/[0.06] hover:bg-white/[0.12] border border-white/15 hover:border-white/30 backdrop-blur-xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.35),0_4px_16px_rgba(0,0,0,0.4)] transition-all group"
             >
               {/* Fine 8-Point Geometric Sparkle Emblem */}
-              <span className="relative flex items-center justify-center w-5 h-5 text-violet-300 group-hover:text-purple-200 transition-colors drop-shadow-[0_0_8px_rgba(168,85,247,0.7)]">
+              <span className="relative flex items-center justify-center w-5 h-5 text-violet-300 group-hover:text-purple-200 transition-colors drop-shadow-[0_0_10px_rgba(168,85,247,0.9)]">
                 <svg
                   viewBox="0 0 24 24"
                   fill="none"
@@ -97,42 +97,42 @@ export default function Home() {
                   />
                 </svg>
               </span>
-              <span className="tracking-[0.35em] font-bold text-sm sm:text-base text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)]">
+              <span className="tracking-[0.35em] font-bold text-sm sm:text-base text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)]">
                 DREAMDOOR
               </span>
             </a>
 
-            {/* Desktop Navigation Links (Bold & High Visibility with Frosted Backing) */}
-            <nav className="hidden md:flex items-center gap-7 lg:gap-10 px-6 py-2 rounded-full bg-black/40 backdrop-blur-md border border-white/15 shadow-[0_4px_24px_rgba(0,0,0,0.45)] text-xs tracking-[0.2em] uppercase font-bold">
+            {/* Desktop Navigation Links (Bold, High-Visibility Liquid Glass Pill) */}
+            <nav className="hidden md:flex items-center gap-7 lg:gap-10 px-7 py-2.5 rounded-full liquid-glass-pill text-xs tracking-[0.2em] uppercase font-bold">
               <a
                 href="#"
-                className="relative text-white font-bold hover:text-white transition-colors py-0.5 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+                className="relative text-white font-bold hover:text-white transition-colors py-0.5 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
               >
                 Home
                 {/* Active Dot underneath */}
-                <span className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-violet-400 shadow-[0_0_8px_#a855f7]" />
+                <span className="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-violet-400 shadow-[0_0_10px_#a855f7]" />
               </a>
               <a
                 href="#about"
-                className="text-white/80 hover:text-white font-semibold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+                className="text-white/85 hover:text-white font-bold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
               >
                 About
               </a>
               <a
                 href="#products"
-                className="text-white/80 hover:text-white font-semibold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+                className="text-white/85 hover:text-white font-bold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
               >
                 Products
               </a>
               <a
                 href="#blog"
-                className="text-white/80 hover:text-white font-semibold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+                className="text-white/85 hover:text-white font-bold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
               >
                 Blog
               </a>
               <a
                 href="#contact"
-                className="text-white/80 hover:text-white font-semibold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]"
+                className="text-white/85 hover:text-white font-bold transition-colors duration-200 drop-shadow-[0_1px_4px_rgba(0,0,0,0.95)]"
               >
                 Contact
               </a>
@@ -140,10 +140,10 @@ export default function Home() {
 
             {/* Right Header Controls */}
             <div className="flex items-center gap-3 sm:gap-4">
-              {/* Minimalist Theme/Compass Button */}
+              {/* Minimalist Theme/Compass Button in Liquid Glass */}
               <button
                 aria-label="Engine Settings"
-                className="w-9 h-9 rounded-full bg-black/35 hover:bg-black/60 backdrop-blur-md border border-white/15 hover:border-white/30 flex items-center justify-center text-white/80 hover:text-white shadow-[0_2px_10px_rgba(0,0,0,0.4)] transition-all"
+                className="w-9 h-9 rounded-full liquid-glass-pill flex items-center justify-center text-white/85 hover:text-white transition-all cursor-pointer"
               >
                 <svg
                   className="w-3.5 h-3.5"
@@ -157,28 +157,28 @@ export default function Home() {
                 </svg>
               </button>
 
-              {/* Bold High-Visibility "Get Started ->" Button */}
+              {/* Bold High-Visibility Liquid Glass "Get Started ->" Button */}
               <a
                 href="#start"
-                className="hidden sm:inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/15 hover:bg-white/25 border border-white/25 hover:border-white/45 text-xs tracking-[0.18em] uppercase font-bold text-white shadow-[0_2px_14px_rgba(0,0,0,0.5)] backdrop-blur-md transition-all duration-300"
+                className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-full liquid-glass-btn text-xs tracking-[0.18em] uppercase font-bold text-white transition-all duration-300"
               >
                 <span>Get Started</span>
                 <svg
-                  className="w-3.5 h-3.5 text-white/80"
+                  className="w-3.5 h-3.5 text-white/90"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="1.75"
+                  strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </a>
 
-              {/* Mobile Menu Toggle */}
+              {/* Mobile Menu Toggle in Liquid Glass */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label="Toggle Navigation"
-                className="md:hidden w-9 h-9 rounded-full bg-black/40 hover:bg-black/60 border border-white/20 flex items-center justify-center text-white backdrop-blur-md shadow-sm transition-all"
+                className="md:hidden w-9 h-9 rounded-full liquid-glass-pill flex items-center justify-center text-white transition-all cursor-pointer"
               >
                 <svg
                   className="w-4 h-4"
@@ -197,13 +197,13 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Mobile Dropdown Menu (Bold, High Contrast, Frosted Pill Styling) */}
+          {/* Mobile Dropdown Menu (Bold, High Contrast Liquid Glass Card) */}
           {mobileMenuOpen && (
-            <div className="md:hidden mt-3 mx-auto w-full p-4 rounded-2xl bg-black/90 border border-white/20 backdrop-blur-2xl shadow-[0_12px_40px_rgba(0,0,0,0.85)] flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="md:hidden mt-3 mx-auto w-full p-4 rounded-2xl liquid-glass-card flex flex-col gap-1.5 animate-in fade-in slide-in-from-top-2 duration-200">
               <a
                 href="#"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl bg-white/10 border border-white/15 shadow-sm"
+                className="flex items-center justify-between text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl bg-white/12 border border-white/20 shadow-sm"
               >
                 <span>Home</span>
                 <span className="w-1.5 h-1.5 rounded-full bg-violet-400 shadow-[0_0_8px_#a855f7]" />
@@ -211,35 +211,35 @@ export default function Home() {
               <a
                 href="#about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
+                className="flex items-center justify-between text-white/85 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/8 transition-colors"
               >
                 <span>About</span>
               </a>
               <a
                 href="#products"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
+                className="flex items-center justify-between text-white/85 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/8 transition-colors"
               >
                 <span>Products</span>
               </a>
               <a
                 href="#blog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
+                className="flex items-center justify-between text-white/85 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/8 transition-colors"
               >
                 <span>Blog</span>
               </a>
               <a
                 href="#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center justify-between text-white/80 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/5 transition-colors"
+                className="flex items-center justify-between text-white/85 hover:text-white text-xs font-bold tracking-[0.22em] uppercase py-3 px-3.5 rounded-xl hover:bg-white/8 transition-colors"
               >
                 <span>Contact</span>
               </a>
               <a
                 href="#start"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-2 flex items-center justify-center gap-2 py-3 rounded-full bg-white/20 hover:bg-white/30 border border-white/30 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg backdrop-blur-md transition-all"
+                className="mt-2 flex items-center justify-center gap-2 py-3 rounded-full liquid-glass-btn text-xs font-bold uppercase tracking-[0.2em] text-white shadow-lg transition-all"
               >
                 <span>Get Started</span>
                 <span>→</span>
