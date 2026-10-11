@@ -44,5 +44,6 @@ next-env.d.ts
 *.zip
 AI_TOKENS_LOCATION.md
 .agents/
+.testsprite/
 
 
