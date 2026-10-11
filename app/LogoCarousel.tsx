@@ -173,6 +173,172 @@ const rowTwoLogos: LogoItem[] = [
   },
 ];
 
+const rowThreeLogos: LogoItem[] = [
+  {
+    name: "SOLARIS CORE",
+    hoverColor: "group-hover:text-amber-400 group-hover:drop-shadow-[0_0_14px_rgba(251,191,36,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v3m0 14v3M2 12h3m14 0h3M4.93 4.93l2.12 2.12m9.9 9.9l2.12 2.12M4.93 19.07l2.12-2.12m9.9-9.9l2.12-2.12" />
+      </svg>
+    ),
+  },
+  {
+    name: "PRISM MATRIX",
+    hoverColor: "group-hover:text-cyan-400 group-hover:drop-shadow-[0_0_14px_rgba(34,211,238,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="12 3 2 21 22 21" />
+        <line x1="12" y1="3" x2="12" y2="21" />
+        <line x1="7" y1="12" x2="17" y2="12" />
+      </svg>
+    ),
+  },
+  {
+    name: "VELOCITY FX",
+    hoverColor: "group-hover:text-rose-400 group-hover:drop-shadow-[0_0_14px_rgba(251,113,133,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polyline points="13 17 18 12 13 7" />
+        <polyline points="6 17 11 12 6 7" />
+      </svg>
+    ),
+  },
+  {
+    name: "MORPHIC LABS",
+    hoverColor: "group-hover:text-violet-400 group-hover:drop-shadow-[0_0_14px_rgba(168,85,247,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" />
+        <path d="M12 6c3.314 0 6 2.686 6 6s-2.686 6-6 6-6-2.686-6-6 2.686-6 6-6z" />
+      </svg>
+    ),
+  },
+  {
+    name: "ZENITH VISUALS",
+    hoverColor: "group-hover:text-blue-400 group-hover:drop-shadow-[0_0_14px_rgba(96,165,250,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9" />
+      </svg>
+    ),
+  },
+  {
+    name: "AURORA SYNTH",
+    hoverColor: "group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_14px_rgba(52,211,153,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M2 12c2.5-4 5.5-4 8 0s5.5 4 8 0 4-2 4-2" />
+        <path d="M2 17c2.5-4 5.5-4 8 0s5.5 4 8 0 4-2 4-2" />
+      </svg>
+    ),
+  },
+  {
+    name: "PHANTOM MESH",
+    hoverColor: "group-hover:text-purple-400 group-hover:drop-shadow-[0_0_14px_rgba(192,132,252,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="12 2 21 7 21 17 12 22 3 17 3 7" />
+        <polyline points="12 2 12 12 21 7" />
+        <polyline points="12 12 3 7" />
+        <polyline points="12 12 12 22" />
+      </svg>
+    ),
+  },
+  {
+    name: "RADIANT LABS",
+    hoverColor: "group-hover:text-pink-400 group-hover:drop-shadow-[0_0_14px_rgba(244,114,182,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="2" fill="currentColor" />
+        <ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(45 12 12)" />
+        <ellipse cx="12" cy="12" rx="9" ry="3" transform="rotate(-45 12 12)" />
+      </svg>
+    ),
+  },
+];
+
+const rowFourLogos: LogoItem[] = [
+  {
+    name: "HORIZON ZERO",
+    hoverColor: "group-hover:text-teal-400 group-hover:drop-shadow-[0_0_14px_rgba(45,212,191,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="6" />
+        <ellipse cx="12" cy="12" rx="10" ry="2.5" transform="rotate(-15 12 12)" />
+      </svg>
+    ),
+  },
+  {
+    name: "CHRONOS AI",
+    hoverColor: "group-hover:text-indigo-400 group-hover:drop-shadow-[0_0_14px_rgba(129,140,248,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <polyline points="12 6 12 12 16 14" />
+      </svg>
+    ),
+  },
+  {
+    name: "MIRAGE STUDIO",
+    hoverColor: "group-hover:text-fuchsia-400 group-hover:drop-shadow-[0_0_14px_rgba(232,121,249,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="6 3 18 3 22 9 12 21 2 9" />
+        <line x1="2" y1="9" x2="22" y2="9" />
+      </svg>
+    ),
+  },
+  {
+    name: "VECTOR FLUX",
+    hoverColor: "group-hover:text-sky-400 group-hover:drop-shadow-[0_0_14px_rgba(56,189,248,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <polygon points="3 11 22 2 13 21 11 13" />
+      </svg>
+    ),
+  },
+  {
+    name: "EMBER CORE",
+    hoverColor: "group-hover:text-orange-400 group-hover:drop-shadow-[0_0_14px_rgba(251,146,60,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 2c.5 3 2 4.5 4 6 2 1.5 3 3.5 3 6 0 4-3.5 7-7 7s-7-3-7-7c0-3.5 2-6 4-7.5 1-1 2-2.5 3-4.5z" />
+      </svg>
+    ),
+  },
+  {
+    name: "NEO CINEMA",
+    hoverColor: "group-hover:text-violet-400 group-hover:drop-shadow-[0_0_14px_rgba(168,85,247,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <rect x="2" y="4" width="20" height="16" rx="3" />
+        <path d="M2 9h20M2 15h20M6 4v5M18 4v5M6 15v5M18 15v5" />
+      </svg>
+    ),
+  },
+  {
+    name: "KINETIX 3D",
+    hoverColor: "group-hover:text-lime-400 group-hover:drop-shadow-[0_0_14px_rgba(163,230,53,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 3a9 9 0 0 0 0 18M3 12a9 9 0 0 0 18 0" strokeDasharray="2 2" />
+      </svg>
+    ),
+  },
+  {
+    name: "CELESTIAL FX",
+    hoverColor: "group-hover:text-rose-400 group-hover:drop-shadow-[0_0_14px_rgba(251,113,133,0.8)]",
+    symbol: (
+      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+        <path d="M12 3l1.8 5.4L19 10.2l-4.4 3.8 1.4 5.6-4-3.2-4 3.2 1.4-5.6-4.4-3.8 5.2-1.8L12 3z" />
+      </svg>
+    ),
+  },
+];
+
 export default function LogoCarousel() {
   return (
     <section className="relative w-full py-16 sm:py-24 bg-black overflow-hidden border-t border-white/[0.05]">
@@ -226,6 +392,44 @@ export default function LogoCarousel() {
             {[...rowTwoLogos, ...rowTwoLogos].map((logo, index) => (
               <div
                 key={`r2-${index}`}
+                className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
+              >
+                <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>
+                  {logo.symbol}
+                </span>
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.24em] text-white/40 group-hover:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                  {logo.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 3: Right -> Left (Subtly staggered speed for rich organic motion) */}
+        <div className="flex w-full overflow-hidden">
+          <div className="animate-marquee-left [animation-duration:44s] flex items-center">
+            {[...rowThreeLogos, ...rowThreeLogos].map((logo, index) => (
+              <div
+                key={`r3-${index}`}
+                className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
+              >
+                <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>
+                  {logo.symbol}
+                </span>
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.24em] text-white/40 group-hover:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                  {logo.name}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Row 4: Left -> Right (Subtly staggered speed) */}
+        <div className="flex w-full overflow-hidden">
+          <div className="animate-marquee-right [animation-duration:34s] flex items-center">
+            {[...rowFourLogos, ...rowFourLogos].map((logo, index) => (
+              <div
+                key={`r4-${index}`}
                 className="group flex items-center gap-3.5 mx-8 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
                 <span className={`text-white/40 transition-all duration-300 group-hover:scale-110 ${logo.hoverColor}`}>

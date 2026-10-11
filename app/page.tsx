@@ -68,10 +68,10 @@ export default function Home() {
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[300px] bg-purple-600/[0.03] rounded-full blur-[130px]" />
         </div>
 
-        {/* MAIN VISUAL: 90VW WIDE "DREAMFRAME" AT BOTTOM WITH WHITE/LAVENDER GRADIENT, PINK GLOW & DEPTH SHADOW */}
-        <div className="absolute bottom-1 sm:bottom-3 lg:bottom-5 left-1/2 -translate-x-1/2 w-[90vw] text-center select-none pointer-events-none z-[1] overflow-hidden">
-          <span className="block text-[11.5vw] sm:text-[12.8vw] lg:text-[13.4vw] font-normal tracking-[0.16em] sm:tracking-[0.18em] uppercase font-mono leading-none whitespace-nowrap bg-gradient-to-b from-white via-[#f8f6ff] to-[#d8b4fe]/85 bg-clip-text text-transparent drop-shadow-[0_0_45px_rgba(244,114,182,0.32)] drop-shadow-[0_0_20px_rgba(236,72,153,0.22)] drop-shadow-[0_16px_36px_rgba(0,0,0,0.95)]">
-            DREAMFRAME
+        {/* MAIN VISUAL: "DREAMDOOR" AT BOTTOM WITH WHITE/LAVENDER GRADIENT, PINK GLOW & DEPTH SHADOW */}
+        <div className="absolute bottom-11 sm:bottom-13 lg:bottom-15 left-[45%] -translate-x-1/2 w-[90vw] text-center select-none pointer-events-none z-[1]">
+          <span className="block text-[10.4vw] sm:text-[11vw] lg:text-[11.4vw] font-bold tracking-[0.11em] sm:tracking-[0.13em] uppercase font-mono leading-none whitespace-nowrap bg-gradient-to-b from-white via-[#f8f6ff] to-[#d8b4fe]/90 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(244,114,182,0.38)] drop-shadow-[0_0_22px_rgba(236,72,153,0.25)] drop-shadow-[0_16px_36px_rgba(0,0,0,0.95)]">
+            DREAMDOOR
           </span>
         </div>
 
@@ -98,7 +98,7 @@ export default function Home() {
                 </svg>
               </span>
               <span className="tracking-[0.35em] font-light text-xs sm:text-sm text-white/90">
-                DREAMFRAME
+                DREAMDOOR
               </span>
             </a>
 
@@ -351,7 +351,7 @@ export default function Home() {
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-violet-400 animate-pulse" />
                   <span className="text-xs uppercase font-mono tracking-wider text-white/80 font-light">
-                    DREAMFRAME ENGINE REEL
+                    DREAMDOOR ENGINE REEL
                   </span>
                 </div>
                 <button

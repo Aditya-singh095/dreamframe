@@ -19,7 +19,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "DREAMFRAME — AI Image Generator",
+  title: "DREAMDOOR — AI Image Generator",
   description: "Next-generation generative AI image engine. Turn words into cinematic worlds.",
 };
 

@@ -252,7 +252,7 @@ export default function ThreeDModelSection() {
               3D
             </span>
             <span className="font-mono text-xs tracking-[0.28em] uppercase font-bold text-neutral-900">
-              DREAMFRAME // MESH
+              DREAMDOOR // MESH
             </span>
           </div>
 
