@@ -9,11 +9,10 @@ import ThreeDModelSection from "./ThreeDModelSection";
 export default function Home() {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const [activeSlide, setActiveSlide] = useState(1);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showDemoModal, setShowDemoModal] = useState(false);
 
-  // Calculate scroll progress through the tall container (0..1)
+  // Calculate scroll progress through the hero container (0..1)
   useEffect(() => {
     const onScroll = () => {
       const el = containerRef.current;
@@ -23,15 +22,6 @@ export default function Home() {
       if (scrollableDistance <= 0) return;
       const progress = Math.max(0, Math.min(1, -rect.top / scrollableDistance));
       setScrollProgress(progress);
-
-      // Synchronize 01, 02, 03 vertical indicator with scroll progress
-      if (progress < 0.33) {
-        setActiveSlide(1);
-      } else if (progress < 0.66) {
-        setActiveSlide(2);
-      } else {
-        setActiveSlide(3);
-      }
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -39,23 +29,12 @@ export default function Home() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleSlideClick = (slideNum: number) => {
-    setActiveSlide(slideNum);
-    const el = containerRef.current;
-    if (!el) return;
-    const rect = el.getBoundingClientRect();
-    const scrollableDistance = rect.height - window.innerHeight;
-    const targetPct = (slideNum - 1) / 2;
-    const targetScrollTop = window.scrollY + rect.top + targetPct * scrollableDistance;
-    window.scrollTo({ top: targetScrollTop, behavior: "smooth" });
-  };
-
   return (
     <div className="relative w-full bg-black text-white selection:bg-purple-600 selection:text-white">
       {/* HERO SCROLL CONTAINER */}
       <div
         ref={containerRef}
-        className="relative h-[450vh] w-full bg-black"
+        className="relative h-[220vh] w-full bg-black"
       >
         {/* FULL-SCREEN STICKY VIEWPORT PINNED WHILE SCROLLING */}
         <div className="sticky top-0 h-screen sm:h-screen min-h-[100dvh] h-[100dvh] w-full overflow-hidden flex flex-col justify-between">
@@ -271,35 +250,9 @@ export default function Home() {
           </div>
         </main>
 
-        {/* VERTICAL SLIDER INDICATOR (RIGHT EDGE) */}
-        <div className="fixed right-6 sm:right-10 top-1/2 -translate-y-1/2 hidden md:flex flex-col items-center gap-6 z-40 text-xs font-mono select-none">
-          {[1, 2, 3].map((num) => {
-            const formatted = num < 10 ? `0${num}` : num;
-            const isActive = activeSlide === num;
-            return (
-              <button
-                key={num}
-                onClick={() => handleSlideClick(num)}
-                className="relative flex items-center gap-2 group cursor-pointer py-1"
-              >
-                <span
-                  className={`transition-colors duration-200 font-light ${
-                    isActive ? "text-white/95" : "text-white/30 group-hover:text-white/60"
-                  }`}
-                >
-                  {formatted}
-                </span>
-                {/* Thin Vertical Indicator Line on active item */}
-                {isActive && (
-                  <span className="w-[1.5px] h-6 bg-gradient-to-b from-white to-violet-400 rounded-full shadow-[0_0_6px_rgba(168,85,247,0.6)]" />
-                )}
-              </button>
-            );
-          })}
-        </div>
 
         {/* BOTTOM FOOTER / EDITORIAL QUOTE BAR */}
-        <footer className="relative z-20 w-full px-4 sm:px-10 lg:px-16 py-4 sm:py-6 pb-6 sm:pb-8">
+        <footer id="contact" className="relative z-20 w-full px-4 sm:px-10 lg:px-16 py-4 sm:py-6 pb-6 sm:pb-8">
           <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-white/50">
             {/* Left subtle prompt pill */}
             <div className="hidden sm:flex items-center gap-2 text-white/35 font-mono text-[11px]">
@@ -361,13 +314,19 @@ export default function Home() {
       </div>
 
       {/* SECTION 1: INFINITE LOGO CAROUSEL */}
-      <LogoCarousel />
+      <section id="about">
+        <LogoCarousel />
+      </section>
 
       {/* SECTION 2: ASYMMETRIC BENTO GRID */}
-      <BentoGrid />
+      <section id="products">
+        <BentoGrid />
+      </section>
 
       {/* SECTION 3: 3D MODEL CREATOR */}
-      <ThreeDModelSection />
+      <section id="blog">
+        <ThreeDModelSection />
+      </section>
     </div>
   );
 }
