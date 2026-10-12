@@ -38,7 +38,7 @@ export default function ThreeDModelSection() {
     const isMobile = width < 640;
 
     const camera = new THREE.PerspectiveCamera(42, width / height, 0.1, 100);
-    camera.position.set(0, isMobile ? 0.35 : 0.6, isMobile ? 3.7 : 3.2);
+    camera.position.set(0, isMobile ? 0.25 : 0.6, isMobile ? 3.8 : 3.2);
 
     const renderer = new THREE.WebGLRenderer({
       canvas,
@@ -63,7 +63,7 @@ export default function ThreeDModelSection() {
     controls.minDistance = 1.2;
     controls.maxDistance = 5.5;
     controls.maxPolarAngle = Math.PI / 2 + 0.15; // Don't go below ground
-    controls.target.set(0, 0, 0);
+    controls.target.set(0, isMobile ? -0.12 : 0, 0);
 
     // 3. Studio Lighting for Clean Light-Gray Aesthetic
     const ambientLight = new THREE.AmbientLight(0xffffff, 1.4);
@@ -152,7 +152,10 @@ export default function ThreeDModelSection() {
       const h = container.clientHeight;
       camera.aspect = w / h;
       const mobile = w < 640;
-      camera.position.set(0, mobile ? 0.35 : 0.6, mobile ? 3.7 : 3.2);
+      camera.position.set(0, mobile ? 0.25 : 0.6, mobile ? 3.8 : 3.2);
+      if (controlsRef.current) {
+        controlsRef.current.target.set(0, mobile ? -0.12 : 0, 0);
+      }
       camera.updateProjectionMatrix();
       renderer.setSize(w, h);
     };
@@ -231,7 +234,8 @@ export default function ThreeDModelSection() {
   const handleResetView = () => {
     if (controlsRef.current) {
       controlsRef.current.reset();
-      controlsRef.current.target.set(0, 0, 0);
+      const mobile = containerRef.current ? containerRef.current.clientWidth < 640 : false;
+      controlsRef.current.target.set(0, mobile ? -0.12 : 0, 0);
     }
   };
 
@@ -355,8 +359,8 @@ export default function ThreeDModelSection() {
               </div>
             )}
 
-            {/* Interactive Control Pill Overlay (Top-Right) */}
-            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-2xl liquid-glass-pill max-w-[calc(100%-24px)]">
+            {/* Interactive Control Pill Overlay (Top-Right on Desktop, Centered Top on Mobile) */}
+            <div className="!absolute top-3 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:top-5 sm:right-6 z-20 flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-2xl liquid-glass-pill max-w-[calc(100%-24px)] shadow-lg">
               {/* Mode Buttons */}
               <div className="flex items-center gap-0.5 sm:gap-1 bg-white/[0.06] p-0.5 sm:p-1 rounded-xl">
                 {(["textured", "clay", "wireframe"] as RenderMode[]).map((mode) => (
