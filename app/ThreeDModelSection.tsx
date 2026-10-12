@@ -86,7 +86,7 @@ export default function ThreeDModelSection() {
 
     // Subtle contact ground shadow
     const shadowGeo = new THREE.PlaneGeometry(3, 3);
-    const shadowMat = new THREE.ShadowMaterial({ opacity: 0.12 });
+    const shadowMat = new THREE.ShadowMaterial({ opacity: 0.45 });
     const shadowPlane = new THREE.Mesh(shadowGeo, shadowMat);
     shadowPlane.rotation.x = -Math.PI / 2;
     shadowPlane.position.y = -1.0;
@@ -236,41 +236,41 @@ export default function ThreeDModelSection() {
   };
 
   return (
-    <section className="relative w-full bg-[#f4f5f7] text-neutral-900 overflow-hidden border-t border-neutral-300/80 select-none">
-      {/* AMBIENT STUDIO LIGHTING GRADIENTS (CLEAN LIGHT-GRAY) */}
+    <section className="relative w-full bg-[#08080c] text-white overflow-hidden border-t border-white/[0.08] select-none">
+      {/* AMBIENT STUDIO LIGHTING GRADIENTS (DARK CINEMATIC STUDIO) */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-white via-neutral-100/60 to-transparent blur-3xl opacity-80" />
-        <div className="absolute bottom-0 right-1/4 w-[600px] h-[350px] bg-indigo-50/40 rounded-full blur-3xl" />
-        <div className="absolute -left-20 top-1/3 w-[450px] h-[450px] bg-purple-50/30 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-b from-violet-600/[0.08] via-purple-900/[0.04] to-transparent blur-3xl opacity-80" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[350px] bg-indigo-900/10 rounded-full blur-3xl" />
+        <div className="absolute -left-20 top-1/3 w-[450px] h-[450px] bg-purple-900/[0.08] rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 relative z-10 pt-8 sm:pt-10 pb-6">
         {/* ============================================================== */}
         {/* 1. TOP BAR (LOGO, SUB-NAV, ACTION PILL)                        */}
         {/* ============================================================== */}
-        <div className="flex items-center justify-between pb-6 sm:pb-8 border-b border-neutral-300/60">
+        <div className="flex items-center justify-between pb-6 sm:pb-8 border-b border-white/10">
           {/* Left Brand Identifier */}
           <div className="flex items-center gap-2.5 sm:gap-3">
-            <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-neutral-900 text-white text-xs font-mono shrink-0">
+            <span className="flex items-center justify-center w-6 h-6 rounded-lg bg-white/10 text-white text-xs font-mono shrink-0 border border-white/15">
               3D
             </span>
-            <span className="font-mono text-[11px] sm:text-xs tracking-[0.2em] sm:tracking-[0.28em] uppercase font-bold text-neutral-900 truncate">
+            <span className="font-mono text-[11px] sm:text-xs tracking-[0.2em] sm:tracking-[0.28em] uppercase font-bold text-white truncate">
               DREAMDOOR // MESH
             </span>
           </div>
 
           {/* Center Navigation Links (Matching hero3 reference) */}
-          <nav className="hidden md:flex items-center gap-8 text-[11px] font-mono tracking-[0.24em] uppercase text-neutral-500">
-            <a href="#overview" className="hover:text-neutral-900 transition-colors text-neutral-900 font-semibold">
+          <nav className="hidden md:flex items-center gap-8 text-[11px] font-mono tracking-[0.24em] uppercase text-white/50">
+            <a href="#overview" className="hover:text-white transition-colors text-white font-semibold">
               STUDIO
             </a>
-            <a href="#topology" className="hover:text-neutral-900 transition-colors">
+            <a href="#topology" className="hover:text-white transition-colors">
               TOPOLOGY
             </a>
-            <a href="#pipeline" className="hover:text-neutral-900 transition-colors">
+            <a href="#pipeline" className="hover:text-white transition-colors">
               PIPELINE
             </a>
-            <a href="#export" className="hover:text-neutral-900 transition-colors">
+            <a href="#export" className="hover:text-white transition-colors">
               EXPORT
             </a>
           </nav>
@@ -279,7 +279,7 @@ export default function ThreeDModelSection() {
           <div className="flex items-center gap-3 shrink-0">
             <a
               href="#start"
-              className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] sm:text-xs font-mono tracking-wider transition-all shadow-sm hover:shadow"
+              className="inline-flex items-center gap-1.5 sm:gap-2 px-3.5 sm:px-4 py-2 rounded-full liquid-glass-btn text-white text-[11px] sm:text-xs font-mono tracking-wider transition-all shadow-sm"
             >
               <span>LAUNCH 3D</span>
               <span>↗</span>
@@ -293,23 +293,23 @@ export default function ThreeDModelSection() {
         <div className="relative min-h-[520px] sm:min-h-[660px] lg:min-h-[720px] flex flex-col lg:block my-4 overflow-hidden">
           {/* OVERSIZED DISPLAY TYPOGRAPHY (MATCHING hero3 "NUORBIT" PROPORTIONS) */}
           <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0">
-            <span className="text-[16vw] sm:text-[14vw] lg:text-[13vw] font-mono font-black tracking-[0.22em] uppercase text-neutral-900/[0.045] whitespace-nowrap leading-none">
-              DREAM3D
+            <span className="text-[16vw] sm:text-[14vw] lg:text-[13vw] font-mono font-black tracking-[0.22em] uppercase text-white/[0.04] whitespace-nowrap leading-none">
+              DREAMDOOR 3D
             </span>
           </div>
 
           {/* LEFT CONTENT: HEADLINE, SUBTITLE, CTA (RESPONSIVE STACK ON MOBILE, ABSOLUTE ON DESKTOP) */}
           <div className="relative lg:absolute lg:left-0 lg:top-1/2 lg:-translate-y-1/2 z-20 w-full lg:max-w-md pointer-events-auto mb-6 lg:mb-0">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-200/80 border border-neutral-300 text-[10px] font-mono tracking-[0.2em] text-neutral-700 uppercase mb-3 sm:mb-4">
-              <span className="w-1.5 h-1.5 rounded-full bg-indigo-600 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.06] border border-white/15 text-[10px] font-mono tracking-[0.2em] text-violet-300 uppercase mb-3 sm:mb-4">
+              <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse shadow-[0_0_8px_#a855f7]" />
               <span>AI TEXT/IMAGE TO 3D MESH</span>
             </div>
 
-            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] lg:leading-[1.08] tracking-tight text-neutral-900">
+            <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal leading-[1.12] lg:leading-[1.08] tracking-tight text-white drop-shadow-md">
               Sculpt Reality in Zero Latency.
             </h2>
 
-            <p className="mt-3 sm:mt-4 text-[11px] sm:text-sm font-mono tracking-wider text-neutral-500 uppercase leading-relaxed">
+            <p className="mt-3 sm:mt-4 text-[11px] sm:text-sm font-mono tracking-wider text-white/60 uppercase leading-relaxed">
               DISCOVER PRODUCTION DIGITAL ASSETS AND HIGH-DENSITY TOPOLOGIES
             </p>
 
@@ -317,7 +317,7 @@ export default function ThreeDModelSection() {
             <div className="mt-6 sm:mt-8 flex items-center gap-4">
               <a
                 href="#start"
-                className="group inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-neutral-900 hover:bg-neutral-800 text-white text-[11px] sm:text-xs font-mono tracking-[0.18em] uppercase transition-all shadow-md hover:shadow-lg"
+                className="group inline-flex items-center gap-3 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full liquid-glass-btn text-white text-[11px] sm:text-xs font-mono tracking-[0.18em] uppercase transition-all shadow-md"
               >
                 <span>GENERATE 3D MODEL</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
@@ -325,14 +325,14 @@ export default function ThreeDModelSection() {
             </div>
 
             {/* Mesh Specs Pill */}
-            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-neutral-300/60 flex items-center gap-6 text-[11px] font-mono text-neutral-500">
+            <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-white/10 flex items-center gap-6 text-[11px] font-mono text-white/50">
               <div>
-                <span className="block text-neutral-900 font-semibold text-xs">568,813</span>
+                <span className="block text-white font-semibold text-xs">568,813</span>
                 <span>VERTICES</span>
               </div>
-              <div className="w-[1px] h-6 bg-neutral-300" />
+              <div className="w-[1px] h-6 bg-white/20" />
               <div>
-                <span className="block text-neutral-900 font-semibold text-xs">WATERTIGHT</span>
+                <span className="block text-white font-semibold text-xs">WATERTIGHT</span>
                 <span>STL / GLTF</span>
               </div>
             </div>
@@ -347,26 +347,26 @@ export default function ThreeDModelSection() {
 
             {/* Loading Spinner */}
             {loading && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/60 backdrop-blur-sm z-30">
-                <div className="w-10 h-10 border-2 border-neutral-300 border-t-neutral-900 rounded-full animate-spin mb-3" />
-                <span className="text-xs font-mono text-neutral-700 tracking-wider">
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/75 backdrop-blur-md z-30">
+                <div className="w-10 h-10 border-2 border-white/20 border-t-violet-400 rounded-full animate-spin mb-3 shadow-[0_0_12px_rgba(168,85,247,0.5)]" />
+                <span className="text-xs font-mono text-white/80 tracking-wider">
                   LOADING 3D MESH ({loadProgress}%)
                 </span>
               </div>
             )}
 
             {/* Interactive Control Pill Overlay (Top-Right) */}
-            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-2xl bg-white/90 border border-neutral-300/80 backdrop-blur-md shadow-sm max-w-[calc(100%-24px)]">
+            <div className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 flex items-center gap-1 sm:gap-2 p-1 sm:p-1.5 rounded-2xl liquid-glass-pill max-w-[calc(100%-24px)]">
               {/* Mode Buttons */}
-              <div className="flex items-center gap-0.5 sm:gap-1 bg-neutral-100 p-0.5 sm:p-1 rounded-xl">
+              <div className="flex items-center gap-0.5 sm:gap-1 bg-white/[0.06] p-0.5 sm:p-1 rounded-xl">
                 {(["textured", "clay", "wireframe"] as RenderMode[]).map((mode) => (
                   <button
                     key={mode}
                     onClick={() => setRenderMode(mode)}
-                    className={`px-2 sm:px-3 py-1 text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider transition-all rounded-lg whitespace-nowrap ${
+                    className={`px-2 sm:px-3 py-1 text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider transition-all rounded-lg whitespace-nowrap cursor-pointer ${
                       renderMode === mode
-                        ? "bg-white text-neutral-900 font-semibold shadow-sm"
-                        : "text-neutral-500 hover:text-neutral-900"
+                        ? "bg-white/20 text-white font-bold shadow-sm"
+                        : "text-white/50 hover:text-white"
                     }`}
                   >
                     {mode}
@@ -377,10 +377,10 @@ export default function ThreeDModelSection() {
               {/* Auto Rotate Toggle */}
               <button
                 onClick={() => setAutoRotate(!autoRotate)}
-                className={`px-2 sm:px-3 py-1 rounded-xl text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider border transition-all whitespace-nowrap ${
+                className={`px-2 sm:px-3 py-1 rounded-xl text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider border transition-all whitespace-nowrap cursor-pointer ${
                   autoRotate
-                    ? "bg-indigo-50 border-indigo-200 text-indigo-700 font-semibold"
-                    : "bg-white border-neutral-200 text-neutral-500"
+                    ? "bg-violet-500/20 border-violet-400/40 text-violet-300 font-semibold shadow-[0_0_8px_rgba(168,85,247,0.3)]"
+                    : "bg-white/[0.04] border-white/10 text-white/50 hover:text-white"
                 }`}
                 title="Toggle Auto Spin"
               >
@@ -390,7 +390,7 @@ export default function ThreeDModelSection() {
               {/* Reset View */}
               <button
                 onClick={handleResetView}
-                className="px-2 sm:px-3 py-1 rounded-xl text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider bg-white hover:bg-neutral-100 border border-neutral-200 text-neutral-700 transition-all whitespace-nowrap"
+                className="px-2 sm:px-3 py-1 rounded-xl text-[9px] sm:text-[10px] font-mono uppercase tracking-wide sm:tracking-wider bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 text-white/80 transition-all whitespace-nowrap cursor-pointer"
                 title="Reset Camera"
               >
                 RESET
@@ -399,7 +399,7 @@ export default function ThreeDModelSection() {
 
             {/* Floating Interaction Hint (Bottom Center) */}
             <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-20 w-max max-w-[90vw] text-center">
-              <span className="inline-block px-3 py-1 rounded-full bg-white/80 border border-neutral-300 text-[9px] sm:text-[10px] font-mono text-neutral-600 uppercase tracking-wider sm:tracking-widest backdrop-blur-md shadow-xs truncate">
+              <span className="inline-block px-3.5 py-1 rounded-full liquid-glass-pill text-[9px] sm:text-[10px] font-mono text-white/70 uppercase tracking-wider sm:tracking-widest truncate">
                 ✦ DRAG TO ROTATE 360° · PINCH TO ZOOM
               </span>
             </div>
@@ -409,60 +409,60 @@ export default function ThreeDModelSection() {
         {/* ============================================================== */}
         {/* 3. BOTTOM TELEMETRY / METRIC BAR (EXACT HERO3 MATCH)           */}
         {/* ============================================================== */}
-        <div className="pt-6 border-t border-neutral-300/80 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center">
+        <div className="pt-6 border-t border-white/10 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 items-center">
           {/* STAT 1 (hero3 27K+ ARTISTS) */}
           <div className="flex flex-col">
-            <span className="text-xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
+            <span className="text-xl sm:text-3xl font-mono font-bold text-white tracking-tight">
               48K+
             </span>
-            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 uppercase mt-0.5">
               3D ASSETS CREATED
             </span>
           </div>
 
           {/* STAT 2 (hero3 876K+ ARTWORK) */}
-          <div className="flex flex-col border-l border-neutral-300/80 pl-4 sm:pl-6">
-            <span className="text-xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
+          <div className="flex flex-col border-l border-white/10 pl-4 sm:pl-6">
+            <span className="text-xl sm:text-3xl font-mono font-bold text-white tracking-tight">
               1.2M+
             </span>
-            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 uppercase mt-0.5">
               WATERTIGHT MESHES
             </span>
           </div>
 
           {/* STAT 3 (hero3 20K+ AUCTION) */}
-          <div className="flex flex-col border-t sm:border-t-0 sm:border-l border-neutral-300/80 pt-4 sm:pt-0 sm:pl-6">
-            <span className="text-xl sm:text-3xl font-mono font-bold text-neutral-900 tracking-tight">
+          <div className="flex flex-col border-t sm:border-t-0 sm:border-l border-white/10 pt-4 sm:pt-0 sm:pl-6">
+            <span className="text-xl sm:text-3xl font-mono font-bold text-white tracking-tight">
               0.8s
             </span>
-            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-neutral-500 uppercase mt-0.5">
+            <span className="text-[9px] sm:text-[10px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 uppercase mt-0.5">
               INFERENCE LATENCY
             </span>
           </div>
 
           {/* PLAY VIDEO BUTTON (MATCHING hero3 PLAY VIDEO CTA) */}
-          <div className="flex items-center gap-3 border-t sm:border-t-0 border-l sm:border-l border-neutral-300/80 pt-4 sm:pt-0 pl-4 sm:pl-6">
+          <div className="flex items-center gap-3 border-t sm:border-t-0 border-l sm:border-l border-white/10 pt-4 sm:pt-0 pl-4 sm:pl-6">
             <button
               onClick={() => setShowVideoModal(true)}
               className="group flex items-center gap-2.5 sm:gap-3 cursor-pointer"
             >
-              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-neutral-900 flex items-center justify-center transition-all duration-300 group-hover:scale-105 group-hover:bg-neutral-900 group-hover:text-white shrink-0">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full liquid-glass-btn flex items-center justify-center transition-all duration-300 group-hover:scale-105 shrink-0 text-white">
                 <svg className="w-3.5 h-3.5 fill-current ml-0.5" viewBox="0 0 24 24">
                   <polygon points="6 3 20 12 6 21 6 3" />
                 </svg>
               </div>
-              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.16em] sm:tracking-[0.2em] uppercase font-bold text-neutral-900 whitespace-nowrap">
+              <span className="text-[10px] sm:text-[11px] font-mono tracking-[0.16em] sm:tracking-[0.2em] uppercase font-bold text-white/90 group-hover:text-white whitespace-nowrap">
                 PLAY VIDEO
               </span>
             </button>
           </div>
 
           {/* FORMATS / SOCIALS COLUMN */}
-          <div className="col-span-2 sm:col-span-1 lg:col-span-1 flex items-center justify-start sm:justify-end gap-1.5 sm:gap-2 pt-3 sm:pt-0 border-t sm:border-t-0 lg:border-l border-neutral-300/80 lg:pl-6">
+          <div className="col-span-2 sm:col-span-1 lg:col-span-1 flex items-center justify-start sm:justify-end gap-1.5 sm:gap-2 pt-3 sm:pt-0 border-t sm:border-t-0 lg:border-l border-white/10 lg:pl-6">
             {["GLB", "STL", "OBJ", "USDZ"].map((format) => (
               <span
                 key={format}
-                className="px-2 py-1 rounded bg-neutral-200/80 text-[10px] font-mono font-semibold text-neutral-700"
+                className="px-2 py-1 rounded bg-white/[0.06] border border-white/10 text-[10px] font-mono font-semibold text-white/70"
               >
                 {format}
               </span>

@@ -375,10 +375,10 @@ export default function LogoCarousel() {
                 key={`r1-${index}`}
                 className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
+                <span className={`text-white/70 sm:text-white/65 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/70 sm:text-white/65 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>
@@ -394,10 +394,10 @@ export default function LogoCarousel() {
                 key={`r2-${index}`}
                 className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
+                <span className={`text-white/70 sm:text-white/65 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/70 sm:text-white/65 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>
@@ -413,10 +413,10 @@ export default function LogoCarousel() {
                 key={`r3-${index}`}
                 className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
+                <span className={`text-white/70 sm:text-white/65 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/70 sm:text-white/65 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>
@@ -432,10 +432,10 @@ export default function LogoCarousel() {
                 key={`r4-${index}`}
                 className="group flex items-center gap-3 sm:gap-3.5 mx-5 sm:mx-12 shrink-0 cursor-pointer select-none transition-all duration-300"
               >
-                <span className={`text-white/50 sm:text-white/40 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
+                <span className={`text-white/70 sm:text-white/65 transition-all duration-300 group-hover:scale-110 group-active:scale-110 ${logo.hoverColor} ${logo.hoverColor.replaceAll("group-hover:", "group-active:")}`}>
                   {logo.symbol}
                 </span>
-                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/50 sm:text-white/40 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
+                <span className="text-xs sm:text-[13px] font-mono tracking-[0.2em] sm:tracking-[0.24em] text-white/70 sm:text-white/65 group-hover:text-white group-active:text-white transition-colors duration-300 uppercase whitespace-nowrap">
                   {logo.name}
                 </span>
               </div>

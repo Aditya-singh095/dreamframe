@@ -24,6 +24,13 @@ export default function BentoGrid() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-10 lg:px-16 relative z-10">
+        {/* SUBTLE SECTION ANCHOR LABEL */}
+        <div className="flex items-center justify-center mb-8 sm:mb-12">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full liquid-glass-pill text-[11px] font-mono tracking-[0.22em] text-violet-300 uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-violet-400 animate-pulse shadow-[0_0_8px_#a855f7]" />
+            <span>NEURAL PIPELINE // ARCHITECTURE</span>
+          </div>
+        </div>
 
         {/* ASYMMETRIC BENTO GRID */}
         {/* ASYMMETRIC BENTO GRID CONTAINER WITH ROW-ALIGNED ROWS */}
